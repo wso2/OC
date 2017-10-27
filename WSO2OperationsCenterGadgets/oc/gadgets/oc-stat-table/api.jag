@@ -1,0 +1,16 @@
+<%
+	var log = new Log();
+	var api_path = "http://localhost:9764/OCServer/services/oc-server/external/oc/clusters/";
+
+	var xhr = new XMLHttpRequest();
+	xhr.open("GET", api_path);
+	xhr.send(); 
+	try{
+		var x = xhr.responseText;
+		if(x)
+				print(x);
+	}catch(e) {
+		log.info(e);
+	}
+
+%>
